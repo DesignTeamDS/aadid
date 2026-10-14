@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Documentos · AADID</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css?v=12">
+</head>
+<body>
+<header id="site-header" data-page="documentos"></header>
+<main>
+<section class="phero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Caminho"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>Documentos</span></nav>
+    <div class="phero__grid">
+      <div><span class="eyebrow load">Transparência</span><h1 class="load" style="--d:1">Contas abertas, todos os anos.</h1></div>
+      <p class="lead load" style="--d:2">Relatórios e contas, planos de ação e orçamentos desde 2013, e o regulamento interno da associação.</p>
+    </div>
+  </div>
+</section>
+<section class="sec sec--tight">
+  <div class="wrap">
+    <div class="docs rv">
+      <div class="dfeat">
+        <div><span class="eyebrow">Regulamento</span><h3 style="margin-top:10px">Regulamento Interno</h3></div>
+        <a class="btn" href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>Descarregar PDF</a>
+      </div>
+      <div class="yearbar" id="yearbar" role="group" aria-label="Filtrar por anos"></div>
+      <div class="dtable">
+        <table>
+          <thead><tr><th scope="col">Ano</th><th scope="col">Relatório e Contas</th><th scope="col">Plano e Orçamento</th></tr></thead>
+          <tbody id="dbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <p class="note"><b>Documentos.</b> CPT "Documento" (campos ACF: ano, tipo, ficheiro) + Loop Grid em lista, ou widget Table de addon. Filtro por períodos: Taxonomy Filter. Em mobile a tabela faz scroll horizontal dentro do próprio container.</p>
+  </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
+<script src="app.js?v=12" charset="utf-8"></script>
+</body>
+</html>
