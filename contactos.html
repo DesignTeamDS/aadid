@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contactos | AADID - Associação dos Amigos das Deficiências Intelectuais e Desenvolvimentais</title>
+<meta name="description" content="Morada, telefones, email e formulário de contacto da AADID.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css?v=21">
+</head>
+<body>
+<header id="site-header" data-page="contactos" data-section="contactos"></header>
+<main>
+<section class="phero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Caminho"><a href="index.html">Início</a><span aria-hidden="true">/</span><span aria-current="page">Contactos</span></nav>
+    <div class="phero__grid">
+      <div><span class="eyebrow load">Contactos</span><h1 class="load" style="--d:1">Fale connosco.</h1></div>
+      <p class="lead load" style="--d:2">Estamos na sede de segunda a sexta, das 08:30 às 17:30. Responderemos à sua mensagem com a maior brevidade possível.</p>
+    </div>
+    
+    
+  </div>
+</section>
+<section class="sec sec--tight">
+  <div class="wrap contact">
+    <div class="cinfo">
+      <div class="citem rv"><span class="citem__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><h3>Morada</h3><p>Rua Dom Agostinho de Jesus e Sousa<br>4000-015 Porto</p></div></div>
+      <div class="citem rv" style="--d:1"><span class="citem__ico" style="--c:var(--amarelo)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><h3>Telefones</h3><div class="lines"><p><a href="tel:+351913636573">913 636 573</a><small>Chamada para rede móvel nacional</small></p><p><a href="tel:+351226184772">226 184 772</a><small>Chamada para rede fixa nacional</small></p></div></div></div>
+      <div class="citem rv" style="--d:2"><span class="citem__ico" style="--c:var(--rosa);--fc:#fff"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><h3>Email</h3><p><a href="mailto:geral@aadid.pt">geral@aadid.pt</a></p></div></div>
+      <div class="citem rv" style="--d:3"><span class="citem__ico" style="--c:var(--azul);--fc:#fff"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>Horário</h3><p>Segunda a sexta<small>08:30 às 17:30</small></p></div></div>
+      <div class="mapcard rv" style="--d:4"><p>Ver a localização no mapa</p><a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=Rua+Dom+Agostinho+de+Jesus+e+Sousa+4000-015+Porto" target="_blank" rel="noopener">Abrir no Google Maps <span class="arr">→</span></a></div>
+    </div>
+
+    <form class="form rv" id="contacto" novalidate style="--d:1">
+      <div><h2 style="font-size:clamp(1.5rem,2.4vw,2rem)">Envie-nos uma mensagem</h2><p class="muted" style="margin-top:6px">Os campos com <span style="color:var(--rosa)">*</span> são obrigatórios.</p></div>
+      <div class="fgrid">
+        <div class="field"><label for="c-nome">Nome <i>*</i></label><input id="c-nome" name="nome" autocomplete="name" required></div>
+        <div class="field"><label for="c-email">Email <i>*</i></label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field field--full"><label for="c-assunto">Assunto <i>*</i></label>
+          <select id="c-assunto" name="assunto" required>
+            <option value="" selected disabled>Escolha um assunto</option>
+            <option>Assuntos gerais</option>
+            <option>Parcerias</option>
+            <option>Dúvidas</option>
+            <option>Sugestões</option>
+          </select></div>
+        <div class="field field--full"><label for="c-msg">Mensagem <i>*</i></label><textarea id="c-msg" name="mensagem" maxlength="1500" required></textarea><div class="field__foot"><small class="hint" id="c-count">0 / 1500</small></div></div>
+      </div>
+      <label class="consent"><input type="checkbox" id="c-rgpd" name="rgpd" required><span>Autorizo a AADID a usar os meus dados para responder a este contacto, de acordo com a <a href="politica-de-privacidade.html">Política de Privacidade e Cookies</a>. <i>*</i></span></label>
+      <p class="ferr" role="alert" hidden></p>
+      <button class="btn" type="submit">Enviar mensagem <span class="arr">→</span></button>
+      <div class="fok" hidden><h3>Mensagem enviada. Obrigado!</h3><p>Vamos responder para o email que indicou com a maior brevidade possível.</p><small>Protótipo: nenhum dado foi enviado.</small></div>
+    </form>
+  </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
+<script src="app.js?v=21" charset="utf-8"></script>
+</body>
+</html>

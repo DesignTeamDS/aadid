@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Notícias | AADID - Associação dos Amigos das Deficiências Intelectuais e Desenvolvimentais</title>
+<meta name="description" content="Notícias e eventos da AADID.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css?v=21">
+</head>
+<body>
+<header id="site-header" data-page="noticias" data-section="noticias"></header>
+<main>
+<section class="phero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Caminho"><a href="index.html">Início</a><span aria-hidden="true">/</span><span aria-current="page">Notícias</span></nav>
+    <div class="phero__grid">
+      <div><span class="eyebrow load">Notícias</span><h1 class="load" style="--d:1">O que se passa na AADID.</h1></div>
+      <p class="lead load" style="--d:2">Novidades da associação, do Lar Residencial e dos eventos com a comunidade.</p>
+    </div>
+    
+    
+  </div>
+</section>
+<section class="sec sec--tight">
+  <div class="wrap">
+    <div class="blog-head">
+      <div class="filters" data-for="posts" role="group" aria-label="Filtrar por categoria">
+        <button type="button" aria-pressed="true" data-f="all">Todas</button>
+        <button type="button" aria-pressed="false" data-f="Notícias">Notícias</button>
+        <button type="button" aria-pressed="false" data-f="Eventos">Eventos</button>
+      </div>
+      <span class="muted" aria-live="polite"><b id="postCount">9</b> publicações</span>
+    </div>
+    <div class="pgrid" data-posts="all"></div>
+    <div style="display:flex;justify-content:center;margin-top:32px"><button class="btn btn--ghost" type="button" id="loadMore">Carregar mais publicações</button></div>
+  </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
+<script src="app.js?v=21" charset="utf-8"></script>
+</body>
+</html>

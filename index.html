@@ -1,13 +1,17 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>AADID Redesign</title>
-<meta name="description" content="Protótipo de redesenho do site da AADID para WordPress + Elementor Pro">
+<title>AADID - Associação dos Amigos das Deficiências Intelectuais e Desenvolvimentais</title>
+<meta name="description" content="AADID - Associação dos Amigos das Deficiências Intelectuais e Desenvolvimentais: apoio a pessoas com DID e às suas famílias, no Porto.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;800&display=swap">
-<link rel="stylesheet" href="styles.css?v=12">
-
-<header id="site-header" data-page="inicio"></header>
+<link rel="stylesheet" href="styles.css?v=21">
+</head>
+<body>
+<header id="site-header" data-page="inicio" data-section="inicio"></header>
 
 <main>
 <!-- HERO -->
@@ -19,7 +23,7 @@
         <p class="lead load" style="--d:2">Apoiamos as pessoas com Deficiências Intelectuais e do Desenvolvimento (DID) e as suas famílias, no Porto, para a sua integração social e comunitária, de acordo com a Convenção dos Direitos das Pessoas com Deficiência.</p>
         <div class="btns load" style="--d:3">
           <a class="btn" href="como-ajudar.html">Quero ajudar <span class="arr">→</span></a>
-          <a class="btn btn--ghost" href="valencias.html">Conhecer as valências</a>
+          <a class="btn btn--ghost" href="o-que-fazemos.html">Conhecer as valências</a>
         </div>
       </div>
     </div>
@@ -31,7 +35,6 @@
       </div>
       <div class="chip chip--b load" style="--d:7" data-track><b data-count="12">12</b><div>atividades<small>todas as semanas</small></div></div>
     </div>
-    <p class="note"><b>Hero.</b> H1 = nome da associação (widget Heading, tag H1). Imagem única full width (altura 560px desktop / 420px tablet / 4:5 mobile) com Motion Effects › Scrolling › Vertical Scroll suave (speed 1). Chips: Mouse Track (opposite, 0.5). Entrada: Fade In Up, delays 0/200/300ms. Contador: widget Counter.</p>
   </div>
 </section>
 
@@ -40,7 +43,6 @@
   <div class="wrap split">
     <div class="split__img rv">
       <figure class="ph" data-speed="0.05"><img src="img/missao-pai-filho.jpg" alt="Pai e filho com Trissomia 21 encostam as testas e sorriem" loading="lazy"></figure>
-      <div class="badge" data-track>Fundada por técnicos e pais</div>
     </div>
     <div class="stack">
       <span class="eyebrow rv">Quem somos</span>
@@ -49,31 +51,8 @@
         <p class="rv" style="--d:2">Muitos jovens com DID recebem anos de apoio escolar dos 3 aos 18 anos. Depois disso, a muitos é negada a continuidade.</p>
         <p class="rv" style="--d:3">Foi para responder a esta falta de vagas que um grupo de técnicos e pais criou a AADID.</p>
       </div>
-      <a class="link rv" style="--d:4" href="sobre-nos.html">A nossa história <span class="arr">→</span></a>
+      <a class="link rv" style="--d:4" href="historia.html">A nossa história <span class="arr">→</span></a>
     </div>
-  </div>
-</section>
-
-<!-- VALÊNCIAS (resumo) -->
-<section class="sec sec--tight">
-  <div class="wrap">
-    <div class="shead">
-      <div><span class="eyebrow rv">Valências</span><h2 class="rv" style="--d:1">Duas respostas para cada fase do dia.</h2></div>
-      <a class="btn btn--ghost rv" style="--d:2" href="valencias.html">Ver valências <span class="arr">→</span></a>
-    </div>
-    <div class="val">
-      <a class="vcard vcard--caci rv" href="valencias.html#caci">
-        <span class="vcard__tag">Resposta social</span>
-        <h3>CACI<small>Centro de Atividades e Capacitação para a Inclusão</small></h3>
-        <ul class="tags"><li>Psicologia</li><li>Serviço social</li><li>Psicomotricidade</li><li>Atividades da vida diária</li><li>Oficinas</li><li>Desporto adaptado</li><li>+ 7</li></ul>
-      </a>
-      <a class="vcard rv" style="--d:2" href="valencias.html#terapeutica">
-        <span class="vcard__tag">Apoio clínico</span>
-        <h3>Unidade Terapêutica<small>Fisioterapia, terapia da fala e terapia ocupacional</small></h3>
-        <figure class="ph"><img src="img/fisioterapia.jpg" alt="Terapeuta acompanha exercício de mobilidade" loading="lazy"></figure>
-      </a>
-    </div>
-    <p class="note"><b>Valências.</b> 2 Containers-link (grid 1.35fr/1fr). Hover: Transform › Translate Y −6px + Box Shadow.</p>
   </div>
 </section>
 
@@ -82,10 +61,9 @@
   <div class="wrap">
     <div class="shead">
       <div><span class="eyebrow rv">Atividades</span><h2 class="rv" style="--d:1">Movimento, oficinas e comunidade.</h2></div>
-      <a class="btn btn--ghost rv" style="--d:2" href="atividades.html">Ver as 12 atividades <span class="arr">→</span></a>
+      <a class="btn btn--ghost rv" style="--d:2" href="o-que-fazemos.html">Ver as 12 atividades <span class="arr">→</span></a>
     </div>
     <div class="grid-act grid-act--3" data-acts="preview"></div>
-    <p class="note"><b>Atividades.</b> Loop Grid (CPT Atividade), 6 itens, 3 colunas. Descrição aparece no hover; em ecrã tátil fica sempre visível.</p>
   </div>
 </section>
 
@@ -110,7 +88,6 @@
         <a class="link" href="como-ajudar.html#irs">Mais formas de ajudar <span class="arr">→</span></a>
       </div>
     </div>
-    <p class="note"><b>IRS.</b> Container branco, raio 36px; "1%" em Heading 160px verde. Opcional: Popup do Elementor Pro entre janeiro e junho, gatilho "On Scroll 40%".</p>
   </div>
 </section>
 
@@ -122,22 +99,32 @@
         <span class="eyebrow">O nosso futuro</span>
         <h2>Um Lar Residencial para quando os pais já não puderem cuidar.</h2>
         <p>A Câmara Municipal do Porto cedeu um terreno na Prelada. A escritura foi assinada a 5 de fevereiro de 2026. Agora, vamos construir.</p>
-        <div class="btns"><a class="btn" href="como-ajudar.html">Apoiar a construção <span class="arr">→</span></a><a class="btn btn--ghost" href="sobre-nos.html#futuro">Saber mais</a></div>
+        <div class="btns"><a class="btn" href="como-ajudar.html">Apoiar a construção <span class="arr">→</span></a><a class="btn btn--ghost" href="evolucao.html">Acompanhar a evolução</a></div>
       </div>
       <figure class="ph"><img src="img/futuro-lar.jpg" alt="Jovem com Trissomia 21 sorri ao lado de um homem mais velho" loading="lazy" data-speed="0.08"></figure>
     </div>
   </div>
 </section>
 
-<!-- EVENTOS -->
+<!-- NOTÍCIAS -->
 <section class="sec sec--tight">
   <div class="wrap">
     <div class="shead">
-      <div><span class="eyebrow rv">Eventos</span><h2 class="rv" style="--d:1">Na comunidade, com quem nos apoia.</h2></div>
-      <a class="btn btn--ghost rv" style="--d:2" href="eventos.html">Todos os eventos <span class="arr">→</span></a>
+      <div><span class="eyebrow rv">Notícias</span><h2 class="rv" style="--d:1">O que se passa na AADID.</h2></div>
+      <a class="btn btn--ghost rv" style="--d:2" href="noticias.html">Todas as notícias <span class="arr">→</span></a>
     </div>
-    <ul class="evlist" data-events="list"></ul>
-    <p class="note"><b>Eventos.</b> Loop Grid de Posts (categoria Eventos), 1 coluna, template em linha; hover com padding e seta a rodar −45°.</p>
+    <div class="pgrid" data-posts="home"></div>
+  </div>
+</section>
+
+<!-- PARCEIROS -->
+<section class="sec sec--tight">
+  <div class="wrap">
+    <div class="shead">
+      <div><span class="eyebrow rv">Parceiros</span><h2 class="rv" style="--d:1">Quem caminha connosco.</h2></div>
+      <a class="btn btn--ghost rv" style="--d:2" href="parceiros.html">Todos os parceiros <span class="arr">→</span></a>
+    </div>
+    <ul class="logo-grid logo-grid--home" data-partners="home"></ul>
   </div>
 </section>
 
@@ -146,7 +133,6 @@
   <div class="final rv">
     <img src="img/juntos.jpg" alt="" loading="lazy" data-speed="0.1">
     <div class="final__in">
-      <span class="eyebrow">Juntos somos mais fortes</span>
       <h2>Cada contributo aproxima o Lar Residencial.</h2>
       <div class="btns"><a class="btn btn--amarelo" href="como-ajudar.html">Fazer um donativo <span class="arr">→</span></a><a class="btn btn--ghost" href="como-ajudar.html#irs">Consignar o IRS</a></div>
     </div>
@@ -155,4 +141,6 @@
 </main>
 
 <footer id="site-footer"></footer>
-<script src="app.js?v=12" charset="utf-8"></script>
+<script src="app.js?v=21" charset="utf-8"></script>
+</body>
+</html>
