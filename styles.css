@@ -861,3 +861,42 @@ section[id],[id].vdet{scroll-margin-top:110px}
 
 /* v13: mais espaço entre texto e redes sociais no footer */
 .ftr .social{margin-top:28px}
+
+/* =====================================================================
+   v14 — Largura do conteúdo: 70% do browser em desktop (≥1440px)
+   Elementor: Site Settings › Layout › Content Width = 70 % (breakpoint
+   Widescreen/Desktop ≥1440). Abaixo de 1440 mantém-se o contentor de 1240px.
+   Mobile: margens laterais mínimas de 24px.
+   ===================================================================== */
+:root{--gutter:clamp(24px,6vw,40px)}
+@media (min-width:1440px){
+  :root{
+    /* escala de tipo proporcional ao contentor (70vw) em vez da janela */
+    --t-h1:clamp(2.3rem,3.5vw,4.2rem);
+    --t-h2:clamp(1.9rem,2.66vw,3.2rem);
+    --t-h3:clamp(1.25rem,1.26vw,1.55rem);
+    --t-lead:clamp(1.08rem,.9vw,1.28rem);
+    --sec:clamp(72px,6.3vw,136px);
+  }
+  .wrap{max-width:none;width:70vw;padding-inline:0}
+  .hero h1{font-size:clamp(2.4rem,1.82vw + 1.1rem,3.6rem)}
+  .nav .nav__link{padding:0 .62em}
+  .hdr__in{gap:16px;padding-left:18px}
+}
+@media (min-width:1440px){
+  .hero__top{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:64px}
+  .hero h1{font-size:2.95vw}
+}
+
+/* ===== v15: quebras de linha dos títulos =====
+   Regra: o título ocupa a largura disponível da sua coluna e só quebra quando não cabe.
+   Quando quebra, as linhas ficam equilibradas (text-wrap: balance).
+   Elementor: não definir largura máxima nos widgets Heading; a largura vem da coluna/container. */
+.shead > div{flex:1 1 0;min-width:0}
+.shead > div:only-child{flex-basis:100%}
+.shead h2{max-width:none}
+.shead > .btn,.shead > .filters,.shead > .lead{flex:0 0 auto}
+.shead > .lead{max-width:46ch}
+.phero h1{max-width:none}
+.callout h2{max-width:none}
+h1,h2,h3{text-wrap:balance}
