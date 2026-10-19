@@ -900,3 +900,20 @@ section[id],[id].vdet{scroll-margin-top:110px}
 .phero h1{max-width:none}
 .callout h2{max-width:none}
 h1,h2,h3{text-wrap:balance}
+
+/* ===== v16: Como ajudar, quota regular ===== */
+.qsum{margin:4px 0 0;display:grid;border:1px solid var(--linha);border-radius:var(--r-md);background:#fff;overflow:hidden}
+.qsum div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 16px}
+.qsum div + div{border-top:1px solid var(--linha)}
+.qsum dt{font:600 .95rem/1.3 var(--f-display)}
+.qsum dd{margin:0;text-align:right;font:700 1.05rem/1.2 var(--f-display);color:var(--floresta);font-variant-numeric:tabular-nums}
+.qsum dd small{display:block;font:400 .78rem/1.3 var(--f-texto);color:var(--tinta-2)}
+.opt--fixed{cursor:default;background:var(--agua-2);border-color:var(--agua-3)}
+.opt--fixed:hover{border-color:var(--agua-3)}
+.opt__lock{width:24px;height:24px;border-radius:8px;display:grid;place-items:center;background:var(--verde);color:#fff;flex:none}
+.opts__label{margin:10px 0 0;font:600 .92rem/1.2 var(--f-display)}
+.opts__label i{font-style:normal;color:var(--rosa)}
+.opt input[type="radio"]{border-radius:50%}
+.opt input[type="radio"]:checked{background:var(--verde) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='5' fill='white'/%3E%3C/svg%3E") center/18px no-repeat}
+.totals__next{margin:10px 2px 0;font-size:.92rem;color:var(--tinta-2)}
+@media (max-width:560px){.opt--fixed{grid-template-columns:auto 1fr}.opt--fixed em{grid-column:2}}

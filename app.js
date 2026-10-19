@@ -402,10 +402,14 @@
     const eur = n => n.toLocaleString('pt-PT', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' \u20ac';
     const num = s => { const v = parseFloat(String(s).replace(/\s/g, '').replace(',', '.')); return isFinite(v) && v > 0 ? v : 0; };
     const don = $('#f-don');
+    const INSCRICAO = 10; // taxa obrigat\u00f3ria, sempre inclu\u00edda no total
     const calc = () => {
-      const q = $$('[data-q]:checked', ficha).reduce((s, i) => s + parseFloat(i.value), 0);
+      const sel = $('[data-q]:checked', ficha);
+      const q = sel ? parseFloat(sel.value) : 0;
       const d = num(don.value);
-      $('#t-quotas').textContent = eur(q); $('#t-don').textContent = eur(d); $('#t-total').textContent = eur(q + d);
+      $('#t-quota-label').textContent = sel ? (sel.id === 'q-mensal' ? 'Primeira quota mensal' : 'Quota anual') : 'Primeira quota';
+      $('#t-quotas').textContent = eur(q); $('#t-don').textContent = eur(d); $('#t-total').textContent = eur(INSCRICAO + q + d);
+      $('#t-next').textContent = sel ? `Depois, paga ${eur(q)} ${sel.dataset.per}.` : 'Escolha a modalidade para ver o valor das quotas seguintes.';
     };
     ficha.addEventListener('input', calc); ficha.addEventListener('change', calc); calc();
     const cp = $('#f-cp');
@@ -414,7 +418,10 @@
     nasc.addEventListener('input', () => { const d = nasc.value.replace(/\D/g, '').slice(0, 8); nasc.value = [d.slice(0, 2), d.slice(2, 4), d.slice(4)].filter(Boolean).join('/'); });
     const nif = $('#f-nif');
     nif.addEventListener('input', () => { nif.value = nif.value.replace(/\D/g, '').slice(0, 9); });
-    wireForm(ficha, p => { if (!$('[name="pagamento"]:checked', ficha)) p.push('Escolha um meio de pagamento.'); });
+    wireForm(ficha, p => {
+      if (!$('[name="quota"]:checked', ficha)) p.push('Escolha a quota mensal ou anual.');
+      if (!$('[name="pagamento"]:checked', ficha)) p.push('Escolha um meio de pagamento.');
+    });
   }
   const contacto = $('#contacto');
   if (contacto) {
